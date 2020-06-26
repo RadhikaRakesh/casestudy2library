@@ -1,0 +1,83 @@
+#login .container  {
+
+    margin-top: 75px;
+    margin-bottom: 20px;
+    max-width: 650px;
+     height:max-content;
+   /* border: 1px solid #9C9C9C;*/
+    color: white;
+    
+     }
+#login-row  #login-column
+  {
+    /*margin-left: 150px;*/
+    margin-bottom: 20px;
+    max-width: 650px;
+   /* height: 900px;*/
+   max-height: max-content;
+   /* border: 1px solid #9C9C9C;*/
+    color: white;
+    
+  }
+ #login .container  #login-row #login-column #login-box #login-form {
+    padding: 5;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+    color: white;
+  }
+  #login-box{
+   /* margin-top: 75px;*/
+    margin-bottom: 20px;
+    width:550px;
+    height: max-content;
+    border: 1px solid #9C9C9C;
+    
+    background-color:rgb(4, 4, 122);
+    color: white;
+    padding-bottom: 100px;
+  }
+.clearfix{
+  overflow: auto;
+}
+.readbox{
+
+  height: 850px;
+  }
+.input-group-append{
+margin-left: 450px;
+padding-left: 50px;
+/*border:solid springgreen;*/
+}
+.form-check{
+  margin-left: 100px;
+}
+.form-check-label{
+  
+  padding-left: 50px;
+  
+  }
+ input[type=text], input[type=password] ,input[type=date],input[type=radio],input[type=file]{
+   padding: 15px;
+  margin: 5px 0 22px 0;
+  max-width: 400px;
+  background: #f1f1f1;
+  }
+#login
+{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFahfJzVmUKWUmsrRjpLNXGdi3p1nWDCbSLnHJrvWfoxUnoKfL&usqp=CAU");
+}
+#loghead
+{
+  color: white;
+  font-size: 25px;
+}
+#btnregister,#lblremember{
+  margin-left: 50px;
+}
+#loginlink
+{
+  color: white;
+  margin-right:100px ;
+  margin-left: 50px;
+}

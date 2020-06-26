@@ -1,0 +1,47 @@
+#login .container  #login-row #login-column {
+
+    margin-top: 75px;
+    margin-bottom: 20px;
+    max-width: 650px;
+    /*height: 450px;*/
+    height: max-content;
+    /*border: 1px solid #9C9C9C;*/
+    color: white;
+    padding-bottom: 50px;
+  }
+  
+.readbox{
+
+  height: 450px;
+  }
+ #login .container  #login-row #login-column #login-box #login-form {
+    padding: 5;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+    color: white;
+  }
+  #login-box{
+    margin-top: 25px;
+    margin-bottom: 50px;
+    max-width: 650px;
+    height: max-content;
+    border: 1px solid #9C9C9C;
+    /*background-color: rgb(24, 58, 211);*/
+    background-color:rgb(4, 4, 122);
+    color: white;
+    padding-bottom: 50px;
+  }
+.clearfix{
+  overflow: auto;
+}
+
+#login
+{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSFahfJzVmUKWUmsrRjpLNXGdi3p1nWDCbSLnHJrvWfoxUnoKfL&usqp=CAU");
+}
+#loghead
+{
+  color: white;
+  font-size: 25px;
+}
