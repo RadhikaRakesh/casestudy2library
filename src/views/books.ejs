@@ -22,11 +22,12 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <a class="navbar-brand" href="/" style="color: white;">HOME</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-           <%for(i=0;i<nav.length-1;i++){%>
-            <li class="nav-item active">
-              <a class="nav-link" href="<%=nav[i].link%>"  style="color: white;"><%=nav[i].name%></a>
-            </li>
-           <%}%>
+            <%for(i=0;i<nav.length;i++){%>
+              <li class="nav-item active">
+                <a class="nav-link" href="<%=nav[i].link%>"  style="color: white;"><%=nav[i].name%></a>
+              </li>
+             <%}%>
+       
           </ul>
         
         </div>

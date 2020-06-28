@@ -24,16 +24,25 @@ loginRouter.get("/", function(req,res)
         
     });
 });
-loginRouter.post("/",function(req,res){
+ loginRouter.post("/",function(req,res){
    
     var uname=req.body.username;
     var pwd=req.body.password;
   
-    logdata.findOne({username:req.body.username,password:req.body.password})
+    logdata.findOne({username:req.body.username,password:req.body.password},function(err,data){
     
-        .then(function (logdata) {
-            if(logdata.username===uname&&logdata.password===pwd)
+      //  .then(function (logdata) {
+            if(err)
+            { 
+                console.log(err);
+                return res.send("error");
+            }
+            else if(!data)
             {
+                res.send("Sorry, you provided worng info");
+            }
+            else{
+               // var type=data.user;
                  Bookdata.find()
                  .then(function(books){
             
@@ -41,13 +50,14 @@ loginRouter.post("/",function(req,res){
                     {
                         nav,
                         title:"Library",
-                        books
+                        books,
+                       // type
                     });
                 });
             }
-        else{
-        res.send("Sorry, you provided worng info");
-        }
+       // else{
+        //res.send("Sorry, you provided worng info");
+       // }
         
         });
         /*.catch(function (err) {
@@ -59,17 +69,27 @@ loginRouter.post("/",function(req,res){
         
     });
 
-/*loginRouter.post("/",function(req,res){
+    /*
+
+
+
+loginRouter.post("/",function(req,res){
    
     var uname=req.body.username;
     var pwd=req.body.password;
   
-    logdata.findOne({username:uname,password:pwd})
-        .then(function(logdata){
+    //logdata.findOne({username:uname},{password:pwd},function(err,data){
+    var data=logdata.find();
+    var i=0;
+      while(i<data.length){
+    // .then(function(logdata){
             // res.send("edit");
-            var type=logdata.user;
-            
-            var books= Bookdata.find()
+           // var type=logdata.user;
+            if(data[i].username==uname&&data[i].password==pwd){
+                 res.send("success");
+            }
+            else{i++;
+           /* var books= Bookdata.find()
              res.render("books",{
                  nav,
                  title:"Library",
@@ -77,12 +97,14 @@ loginRouter.post("/",function(req,res){
                  books
                  
              });
-          
-              
+            // res.send("error");
+            }
+        }
+        res.send("error");   
         
         //res.redirect("books");
     //res.render("","Please enter both id and password");
-    });
+   // });
     
 });*/
 

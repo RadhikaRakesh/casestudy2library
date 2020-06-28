@@ -2,6 +2,7 @@ const express=require("express");
 
 const booksRouter=express.Router();
 const Bookdata=require("../model/bookdata");
+
 //const bodyparser=require("body-parser");
 //var urlencodedParser = bodyparser.urlencoded({ extended: false });
 
@@ -30,6 +31,7 @@ function router(nav)
         summary:"Pathummayude Aadu is a humorous novel by Vaikom Muhammad Basheer. The characters of the novel are members of his family and the action takes place at his home in Thalayolaparambu. The goat in the story belongs to his sister Pathumma."
     }
 ]*/
+
 booksRouter.get("/",function(req,res){
     Bookdata.find()
     .then(function(books){
@@ -37,7 +39,8 @@ booksRouter.get("/",function(req,res){
     {
          nav,
          title:"Library",
-         books
+         books,
+         
     });
 });
 
